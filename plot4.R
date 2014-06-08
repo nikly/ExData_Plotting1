@@ -7,9 +7,9 @@ data$datetime <- strptime(data[,10],"%d/%m/%Y %H:%M:%S") #datetime to datetime
 png(filename="plot4.png") #call device
 par(mfrow = c(2,2)) #set parameters
 attach(data) #attach data
-plot(datetime,Global_active_power, type="l") #plot1
+plot(datetime,Global_active_power, type="l", xlab="") #plot1
 plot(datetime,Voltage, type="l") #plot2
-plot(datetime,Sub_metering_1, type="n", ylab="Energy sub metering") #plot3
+plot(datetime,Sub_metering_1, type="n", ylab="Energy sub metering", xlab="") #plot3
 #establish Lines
 lines(datetime,Sub_metering_1)
 lines(datetime,Sub_metering_2, col="red")
