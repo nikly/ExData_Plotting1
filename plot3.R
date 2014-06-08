@@ -7,7 +7,7 @@ data$datetime <- strptime(data[,10],"%d/%m/%Y %H:%M:%S") #datetime to datetime
 #attaches target dataset to ease calling of variables
 attach(data)
 png(filename="plot3.png") #call png device
-plot(datetime,Sub_metering_1, type="n", ylab="Energy sub metering") #initiates plot
+plot(datetime,Sub_metering_1, type="n", ylab="Energy sub metering", xlab="") #initiates plot
 #establish Lines
 lines(datetime,Sub_metering_1)
 lines(datetime,Sub_metering_2, col="red")
