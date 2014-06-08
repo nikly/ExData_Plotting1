@@ -8,6 +8,6 @@ data$datetime <- strptime(data[,10],"%d/%m/%Y %H:%M:%S") #datetime to datetime
 y <-data$Global_active_power
 x <-data$datetime
 png(filename="plot2.png") #call device
-plot(x,y, type="l", ylab="Global Active Power (kilowatts)") #plot line, y axis label
+plot(x,y, type="l", ylab="Global Active Power (kilowatts)", xlab="") #plot line, y axis label
 #closes graphic device
 dev.off()
